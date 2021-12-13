@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'blogger-sansitalic';
+    src: url('../../blogger-webfont-kit/BloggerSans-BoldItalic.woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    --base: #13e8ec;
+    --spacing: 10px;
+    --blur: 10px;
+    --rotate: 0deg;
+}
+
+html {
+    text-align: center;
+    background: blueviolet;
+    font-family: 'blogger-sansitalic';
+}
+
+body {
+    display: grid;
+    grid-column: 1;
+    grid-row: 2;
+    justify-items: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.jstext {
+    color: var(--base);
+}
+
+img {
+    display: block;
+    max-width: 50%;
+    max-height: 50%;
+    width: auto;
+    height: auto;
+    margin-bottom: 20%;
+    margin-top: 10%;
+    padding:var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+    transform: rotate(var(--rotate));
+}

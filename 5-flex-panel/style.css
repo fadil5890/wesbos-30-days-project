@@ -1,0 +1,67 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: rgba(17, 22, 21, 0.5);
+}
+
+.panels {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.panel1 {background: url(others.jpg);}
+.panel2 {background: url(nature.jpg);}
+.panel3 {background: url(unique.jpg);}
+.panel4 {background: url(standout.jpg);}
+.panel5 {background: url(sports-3.jpg);}
+
+.panel {
+    flex: 1 1 0%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 
+        font-size 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+        flex 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+        background 0.5s;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    color: whitesmoke;
+
+}
+
+.panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel > *:first-child{ transform: translateY(-100%);}
+.panel > *:last-child{ transform: translateY(100%);}
+.panel.open-active > *:first-child, .panel.open-active > *:last-child {transform: translateY(0);}
+
+
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC',cursive;
+    text-shadow: 4px 3px 5px #000000;
+    font-size: 2em;
+}
+
+.panel p:nth-child(2){ font-size: 4em;}
+
+
+.panel.open {
+    flex: 5;
+    font-size: 3em;
+}

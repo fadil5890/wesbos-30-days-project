@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Panels</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="panels">
+        <div class="panel panel1">
+            <p>Me</p>
+            <p>You</p>
+            <p>Others</p>
+        </div>
+        <div class="panel panel2">
+            <p>Nature</p>
+            <p>Were</p>
+            <p>Beautiful</p>
+        </div>
+        <div class="panel panel3">
+            <p>People</p>
+            <p>Born</p>
+            <p>Unique</p>
+        </div>
+        <div class="panel panel4">
+            <p>Great Will</p>
+            <p>Stand</p>
+            <p>From Others</p>
+        </div>
+        <div class="panel panel5">
+            <p>Working</p>
+            <p>Out</p>
+            <p>Yourself</p>
+        </div>
+    </div>
+<script>
+    const panels = document.querySelector('.panels')
+    function clicked(e){
+        const target = e.path;
+        if(target[0].classList[0] === "panel" || target[1].classList[0] === "panel"){
+            target[1].classList.toggle('open');
+            target[1].classList.toggle('open-active');
+        }
+    }
+    panels.addEventListener('click',clicked);
+</script>
+</body>
+</html>
